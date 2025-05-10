@@ -18,16 +18,16 @@ $green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default; */
 :root {
-  --bs-blue: #52B2CF;
+  --bs-blue: #931A1D;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
-  --bs-red: #FF543A;
+  --bs-red: #B51729;
   --bs-orange: #fd7e14;
-  --bs-yellow: #FFD400;
-  --bs-green: #7CC115;
+  --bs-yellow: #A3A308;
+  --bs-green: #A3A308;
   --bs-teal: #20c997;
-  --bs-cyan: #237BFF;
+  --bs-cyan: #00858E;
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
@@ -40,20 +40,20 @@ $cyan:    #0dcaf0 !default; */
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #52B2CF;
+  --bs-primary: #931A1D;
   --bs-secondary: #6c757d;
-  --bs-success: #7CC115;
-  --bs-info: #237BFF;
-  --bs-warning: #FFD400;
-  --bs-danger: #FF543A;
+  --bs-success: #A3A308;
+  --bs-info: #00858E;
+  --bs-warning: #A3A308;
+  --bs-danger: #B51729;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 82, 178, 207;
+  --bs-primary-rgb: 147, 26, 29;
   --bs-secondary-rgb: 108, 117, 125;
-  --bs-success-rgb: 124, 193, 21;
-  --bs-info-rgb: 35, 123, 255;
-  --bs-warning-rgb: 255, 212, 0;
-  --bs-danger-rgb: 255, 84, 58;
+  --bs-success-rgb: 163, 163, 8;
+  --bs-info-rgb: 0, 133, 142;
+  --bs-warning-rgb: 163, 163, 8;
+  --bs-danger-rgb: 181, 23, 41;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
@@ -240,11 +240,11 @@ sup {
 }
 
 a {
-  color: #52B2CF;
+  color: #931A1D;
   text-decoration: underline;
 }
 a:hover {
-  color: rgb(65.6, 142.4, 165.6);
+  color: rgb(117.6, 20.8, 23.2);
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
