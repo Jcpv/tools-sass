@@ -15,16 +15,16 @@ $coloresBg = '';
 echo "<br><br>";
 
 foreach (json_decode($datos, true) as $key => $value) {
-    if ($nombreIni != substr($key, 6, 3)) {
+    if ($nombreIni != substr($key, 6)) {
         $coloresTxt .= "<br/><br/>";
         $coloresBg .= "<br/><br/>";
     }
 
-    $nombreIni = substr($key, 6, 3);
+    $nombreIni = substr($key, 6);
     $nombreFin = substr($key, -3);
 
-    $coloresTxt .= ".txt-$nombreIni-$nombreFin {color:$value;}<br/>";
-    $coloresBg .= ".bg-$nombreIni-$nombreFin {background-color:$value;}<br/>";
+    $coloresTxt .= ".text-$nombreIni {color:$value;}<br/>";
+    $coloresBg .= ".bg-$nombreIni {background-color:$value;}<br/>";
 }
 
 
