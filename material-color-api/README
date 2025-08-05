@@ -1,0 +1,99 @@
+# 🎨 Material Color API (basado en Material Color Utilities)
+
+Este proyecto es una API REST simple construida con **Node.js + Express** que genera escalas de color basadas en el sistema de diseño **Material Design 3 (Material You)** de Google.
+
+Utiliza la librería oficial [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) para generar tonos de una paleta primaria a partir de un color base en formato HEX.
+
+---
+
+## 🚀 Instalación
+
+### 1. Clona el repositorio (o crea una carpeta)
+
+```bash
+git clone https://github.com/tu-usuario/material-color-api.git
+cd material-color-api
+
+
+
+
+/******************************************/
+# 2. Inicializa el proyecto y las dependencias
+
+npm install
+
+    ##Esto instalará:
+
+        express: servidor web
+        @material/material-color-utilities: librería oficial de Google
+        cors: para permitir solicitudes de otros orígenes
+
+
+#Ejecutar el servidor
+
+node index.js
+
+##Por defecto se ejecuta en http://localhost:3000
+
+
+#Uso de la API
+##Endpoint
+GET /api/material?hex=<color_hex>
+
+##Parámetros
+    ###hex – Color en formato hexadecimal (ej: 2e7d32, #2e7d32)
+
+# Ejemplo de solicitud
+
+GET http://localhost:3000/api/material?hex=2e7d32
+
+# Respuesta JSON
+
+{
+  "primary": {
+    "100": "#c7ebc9",
+    "200": "#9bda9e",
+    "300": "#67c16b",
+    "400": "#42a547",
+    "500": "#2e7d32",
+    "600": "#2a6b2d",
+    "700": "#265529",
+    "800": "#204724",
+    "900": "#0d260f"
+  }
+}
+
+# Consumir la API desde PHP
+function getMaterialColorScale($baseHex) {
+    $url = "http://localhost:3000/api/material?hex=" . ltrim($baseHex, "#");
+
+    $json = file_get_contents($url);
+    if ($json === false) return null;
+
+    $data = json_decode($json, true);
+    if (!isset($data['primary'])) return null;
+
+    $result = [];
+    foreach ($data['primary'] as $key => $hex) {
+        $result["color-primary-$key"] = $hex;
+    }
+
+    return $result;
+}
+
+
+#Estructura del proyecto
+material-color-api/
+├── index.js
+├── package.json
+└── README.md
+
+#Recursos
+Material Color Utilities – GitHub
+
+Material Design 3
+
+Cómo funcionan las tonalidades en Material You
+
+#Licencia
+MIT – puedes usar y modificar libremente este proyecto.
